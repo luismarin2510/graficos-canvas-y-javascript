@@ -11,14 +11,21 @@
         pincel.strokeRect(ancho,alto,80,80)
     }
 
-    contador = 0;
-    while (contador<600) {
+    // contador = 0;
+    // while (contador<600) {
 
-        rectagulo(contador,0,"green");
-        rectagulo(contador,80,"red");
-        rectagulo(contador,160,"blue");
+    //     rectagulo(contador,0,"green");
+    //     rectagulo(contador,80,"red");
+    //     rectagulo(contador,160,"blue");
 
-        contador = contador + 80;
+    //     contador = contador + 80;
+        
+    // }
+
+    for (let index = 0; index < 600 ; index = index+ 80) {
+        rectagulo(index,0,"green");
+        rectagulo(index,80,"red");
+        rectagulo(index,160,"blue");
         
     }
 

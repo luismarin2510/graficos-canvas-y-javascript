@@ -1,0 +1,20 @@
+<canvas width="800" height="600" ></canvas>
+
+<script>
+   
+    function rectagulo (ancho , alto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "green"; /// color amarillo
+        pincel.fillRect(ancho,alto,80,80);  // posicion inicial 
+        pincel.strokeStyle="black"
+        pincel.strokeRect(ancho,alto,80,80)
+    }
+
+    rectagulo(0,20);
+    rectagulo(80,20);
+
+
+
+
+</script>

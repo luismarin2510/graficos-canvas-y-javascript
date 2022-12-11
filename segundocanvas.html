@@ -2,17 +2,25 @@
 
 <script>
    
-    function rectagulo (ancho , alto) {
+    function rectagulo (ancho , alto, color) {
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
-        pincel.fillStyle = "green"; /// color amarillo
+        pincel.fillStyle = color; /// colorres
         pincel.fillRect(ancho,alto,80,80);  // posicion inicial 
         pincel.strokeStyle="black"
         pincel.strokeRect(ancho,alto,80,80)
     }
 
-    rectagulo(0,20);
-    rectagulo(80,20);
+    contador = 0;
+    while (contador<600) {
+
+        rectagulo(contador,0,"green");
+        rectagulo(contador,80,"red");
+        rectagulo(contador,160,"blue");
+
+        contador = contador + 80;
+        
+    }
 
 
 

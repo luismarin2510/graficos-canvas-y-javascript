@@ -1,11 +1,17 @@
-<canvas width="600" height="400" ></canvas>
+<canvas width="800" height="600" ></canvas>
 
 <script>
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");
 
-    pincel.fillStyle = "yellow";
-    pincel.fillRect(0,0,600,400)
+    pincel.fillStyle = "yellow"; /// color amarillo
+    pincel.fillRect(0,0,800,600);  // posicion inicial 
+
+    pincel.fillStyle = "Blue";
+    pincel.fillRect(0,200,800,200); /// dejo 200 de espacio y avanzo otros 200 mas 
+
+    pincel.fillStyle = "Red";
+    pincel.fillRect(0,400,800,200); /// empeizo en los ultimos 200 disponibles y abarco 200 
 
 
 </script>

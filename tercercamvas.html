@@ -8,8 +8,8 @@
     pincel.fillRect(0,0,800,600);  // posicion inicial 
 
     function mostraralerta(evento){
-        var x = evento.pageX ; //captura las coordenada en x 
-        var y = evento.pageY ; //captura las coordenada en y 
+        var x = evento.pageX - pantalla.offsetLeft; //captura las coordenada en x 
+        var y = evento.pageY - pantalla.offsetTop; //captura las coordenada en y 
         console.log(evento);
         alert("Ud hizo click"+ "en las coordenadas "+ x +"-"+ y)
     }

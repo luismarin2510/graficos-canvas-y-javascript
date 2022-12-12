@@ -1,0 +1,17 @@
+<canvas width="800" height="600" ></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "yellow"; /// color amarillo
+    pincel.fillRect(0,0,800,600);  // posicion inicial 
+
+    function mostraralerta(evento){
+        console.log(evento);
+        alert("Ud hizo click")
+    }
+    pantalla.onclick =mostraralerta;
+
+
+</script>

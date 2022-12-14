@@ -14,22 +14,25 @@
         pincel.beginPath();
         pincel.arc(x,y,radio,0,2*Math.PI);
         pincel.fill();
-        
-
-
-
     }
 
     function limpiar(){
+        
         pincel.clearRect(0,0,800,600);
     }
 
-    function mensaje(){
-        console.log("mensaje")
+    var x=0;
+    function actualizar (){
+
+        limpiar();
+        desincharcircuferencia(x,20,10);
+        x++;
+
     }
 
-    setInterval(mensaje,500);
+    setInterval(actualizar,50)
+    
 
-    // desincharcircuferencia(20,20,10);
+    
 
 </script>

@@ -14,6 +14,7 @@
         pincel.beginPath();
         pincel.arc(x,y,radio,0,2*Math.PI);
         pincel.fill();
+        
 
 
 
@@ -23,8 +24,12 @@
         pincel.clearRect(0,0,800,600);
     }
 
-    
+    function mensaje(){
+        console.log("mensaje")
+    }
 
-    desincharcircuferencia(20,20,10);
+    setInterval(mensaje,500);
+
+    // desincharcircuferencia(20,20,10);
 
 </script>

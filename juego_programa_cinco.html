@@ -1,0 +1,46 @@
+<canvas width="800" height="600" ></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "green"; /// color amarillo
+    pincel.fillRect(0,0,800,600);  // posicion inicial 
+    var radio = 10;
+
+
+
+    function desincharcircuferencia (x,y,radio,color){
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiar(){
+        
+        pincel.clearRect(0,0,800,600);
+    }
+
+    var x=0;
+    function actualizar (){
+
+        limpiar();
+        desincharcircuferencia(x,20,10);
+        x++;
+
+    }
+
+    
+/// diseño del objetivo /////////////////////////////
+
+
+    desincharcircuferencia(100,100,radio + 20, "red");
+    desincharcircuferencia(100,100,radio + 10, "white");
+    desincharcircuferencia(100,100,radio, "red");
+    
+
+
+</script>
+    

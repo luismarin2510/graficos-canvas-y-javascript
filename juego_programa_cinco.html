@@ -42,8 +42,20 @@ function diseñoobjetivo(x,y){
     desincharcircuferencia(x,y,radio + 10, "white");
     desincharcircuferencia(x,y,radio, "red");
 
-
 }
+
+/// funcion random para las coordenadas
+
+function posicion(max){
+
+    return Math.floor(Math.random()*max)
+}
+
+xaleatorio = posicion(800);
+yaleatorio = posicion(600);
+
+
+diseñoobjetivo(xaleatorio,yaleatorio);
 
     
     

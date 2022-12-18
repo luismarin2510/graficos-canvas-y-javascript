@@ -1,0 +1,42 @@
+<canvas width="800" height="800"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'Black';
+    pincel.fillRect(0, 0, 800, 800);
+
+    var puedoDibujar = false; // se da flase para que no se pueda dibujar hasta el click 
+
+    function dibujarCirculo(evento) {  // crea el circulo 
+
+        if(puedoDibujar) {  // si dibujar es verdadero pasa los parametros 
+            var x = evento.pageX - pantalla.offsetLeft;   // resta margen izquierdo
+            var y = evento.pageY - pantalla.offsetTop;  // resta margen superior 
+            pincel.fillStyle = 'blue';  // circulos de color azul 
+            pincel.beginPath();
+            pincel.arc(x, y, 3, 0, 2 * 3.14);  // parametros del circulo 
+            pincel.fill();
+        }
+
+    }
+
+
+    function habilitarDibujar() {  /// funcion para habilitar los parametros 
+
+        puedoDibujar = true;  // habilita los parametros de dibulo 
+    }
+
+    function deshabilitarDibujar() {  // funcion que desactiva los parametros de dibujo 
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousemove = dibujarCirculo;  //dibula los circulos al moverse 
+
+    pantalla.onmousedown = habilitarDibujar;  // habilita el dibulo si solo se da click 
+
+    pantalla.onmouseup = deshabilitarDibujar;  // desabilita los parametros de dibulo 
+
+</script>

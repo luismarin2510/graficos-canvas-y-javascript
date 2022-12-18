@@ -4,6 +4,11 @@
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");
 
+    /// patronizando variables 
+    var xaleatorio;
+    var yaleatorio;
+    
+
     pincel.fillStyle = "green"; /// color amarillo
     pincel.fillRect(0,0,800,600);  // posicion inicial 
     var radio = 10;
@@ -47,6 +52,7 @@ function posicion(max){
 
 
 ///// actualizar pantalla 
+
 function actualizar (){
     limpiar();
 
@@ -58,7 +64,18 @@ function actualizar (){
 
 setInterval(actualizar,500)
 
+/// funcion disparar para dar el en blanco 
 
+function disparar (evento){
+    var x = evento.pageX - pantalla.offsetLeft;
+    var y = evento.pageY - pantalla.offsetTop;
+
+
+
+    alert(" haz dado en el blanco ")
+}
+
+pantalla.onclick = disparar;
     
     
 

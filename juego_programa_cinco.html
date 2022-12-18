@@ -7,7 +7,7 @@
     /// patronizando variables 
     var xaleatorio;
     var yaleatorio;
-    
+
 
     pincel.fillStyle = "green"; /// color amarillo
     pincel.fillRect(0,0,800,600);  // posicion inicial 
@@ -62,7 +62,7 @@ function actualizar (){
 
 }
 
-setInterval(actualizar,500)
+
 
 /// funcion disparar para dar el en blanco 
 
@@ -70,11 +70,17 @@ function disparar (evento){
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
 
+    if((x < xaleatorio + radio)&& // toma desde el centro hacia el exteriror derecho del circulo  
+    (x > xaleatorio - radio )&&   // toma el borde exterior izquierdo  hacia el centro del circulo 
+    (y < yaleatorio + radio)&& // toma desde el centro hacia el exteriror superior del circulo
+    (y > yaleatorio - radio)){ // toma desde el centro hacia el exteriror inferior  del circulo
+        
+        alert(" haz dado en el blanco ")
 
-
-    alert(" haz dado en el blanco ")
+    }
+   
 }
-
+setInterval(actualizar,1000)
 pantalla.onclick = disparar;
     
     

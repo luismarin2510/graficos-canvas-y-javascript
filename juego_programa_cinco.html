@@ -19,20 +19,12 @@
     }
 
     function limpiar(){
-        
         pincel.clearRect(0,0,800,600);
+        
     }
 
     var x=0;
-    function actualizar (){
 
-        limpiar();
-        desincharcircuferencia(x,20,10);
-        x++;
-
-    }
-
-    
 /// diseño del objetivo /////////////////////////////
 
 
@@ -51,11 +43,21 @@ function posicion(max){
     return Math.floor(Math.random()*max)
 }
 
-xaleatorio = posicion(800);
-yaleatorio = posicion(600);
 
 
-diseñoobjetivo(xaleatorio,yaleatorio);
+
+///// actualizar pantalla 
+function actualizar (){
+    limpiar();
+
+    xaleatorio = posicion(800);
+    yaleatorio = posicion(600);
+    diseñoobjetivo(xaleatorio,yaleatorio);
+
+}
+
+setInterval(actualizar,500)
+
 
     
     
